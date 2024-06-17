@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/cerulean/bootstrap.min.css"
+    integrity="sha512-QzwqVdCfEIUhmovYlJ/ET11Uh4MLuvEpwVpTVTRhChwzgfkrQH9BMcDvgwFpi5fMUGVLJAPsEXJVHuODuhmctg=="
+    crossorigin="anonymous" />
+  <title>News App</title>
+</head>
+
+{% include 'nav.html'%}
+
+<div class="jumbotron" style="text-align: center; margin-top:40px">
+  <h2>BREAKING NEWS</h2>
+  <img src="{% static 'images/news.png' %}" class="image" style="width:150px; margin-bottom:-50px; ">
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/cerulean/bootstrap.min.css">
+
+<style>
+  .article-card {
+    margin: 10px;
+    border: 5px solid purple;
+    padding: 10px;
+    width: 30%; /* Adjust width for desired number of columns */
+    display: inline-block; /* Allow side-by-side arrangement */
+  }
+  .article-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+</style>
+
+<div class="container mt-5">
+  <div class="row">
+    {% for article in articles %}
+    <div class="article-card">
+        {% if article.image_url %}
+        <img src="{{ article.image_url }}" alt="{{ article.title }}">
+        {% endif %}
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+        <a href="{{ article.url }}">Read More &raquo;</a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</body>
+</html>
+{% include 'footer.html' %}

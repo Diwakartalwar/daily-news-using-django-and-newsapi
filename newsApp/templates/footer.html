@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  </head>
+  <style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Yaldevi', sans-serif;
+      }
+      span{
+        color: #fc5c65;
+        font-weight:900;
+       
+      }
+       
+      footer{
+        background: rgb(0;0;0);
+        padding: 90px 0;
+      }
+       
+      .footer-container{
+        max-width: 1300px;
+        margin: auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+      }
+       
+      .logo{
+        width: 180px;
+      }
+       
+      .social-media{
+        margin: 20px 0;
+      }
+       
+      .social-media a{
+        color: red;
+        margin-right: 25px;
+        font-size: 22px;
+        text-decoration: none;
+        transition: .3s linear;
+      }
+       
+      .social-media a:hover{
+        color: #fc5c65;
+      }
+       
+      .right-col h1{
+        font-size: 26px;
+      }
+       
+      .border{
+        width: 100px;
+        height: 4px;
+        background: #fc5c65;
+      }
+       
+      .newsletter-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+       
+      .txtb{
+        flex: 1;
+        padding: 18px 40px;
+        font-size: 16px;
+        color: red;
+        background: #ddd;
+        border: none;
+        font-weight: 700;
+        outline: none;
+        border-radius: 30px;
+        min-width: 260px;
+      }
+       
+      .btn{
+        padding: 18px 40px;
+        font-size: 16px;
+        color: red;
+        background: #fc5c65;
+        border: none;
+        font-weight: 700;
+        outline: none;
+        border-radius: 30px;
+        margin-left: 20px;
+        cursor: pointer;
+        transition: opacity .3s linear;
+      }
+       
+      .btn:hover{
+        opacity: .7;
+      }
+       
+      .page-content{
+        min-height: 100vh;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+       
+      @media screen and (max-width:960px) {
+        .footer-container{
+          max-width: 600px;
+        }
+        .right-col{
+          width: 100%;
+          margin-bottom: 60px;
+        }
+       
+        .left-col{
+          width: 100%;
+          text-align: center;
+        }
+      } </style>
+  <body>
+    <footer>
+      <div class="footer-container">
+        <div class="left-col">
+          <div class="social-media">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+            <a href="https://in.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <p class="rights-text" color="red">© 2024 Created By All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
